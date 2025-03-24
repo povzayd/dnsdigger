@@ -61,14 +61,15 @@ sudo apt install dnsutils whois prips
 
 ```
 bash
-wget https://raw.githubusercontent.com/povzayd/your-repo-name/main/domain_info_gatherer.sh
+git clone https://github.com/povzayd/dnsdigger.git
+cd dnsdigger
 ```
 
 3️⃣ Make the script executable:
 
 ```
 bash
-chmod +x domain_info_gatherer.sh
+chmod +x dnsdigger ptrcleaner
 ```
 
 🚀 Usage:
@@ -76,7 +77,7 @@ chmod +x domain_info_gatherer.sh
 
 ```
 bash
-./domain_info_gatherer.sh example.com
+./dnsdigger example.com
 ```
 
 2️⃣ Follow the prompts to choose which information to gather:
@@ -93,3 +94,4 @@ The script will save the output to the following files:
 - `${domain}_cidr.txt`: CIDR block (if fetched)
 - `${domain}_ip_ranges.txt`: IP ranges (if converted)
 - `${domain}_reverse_dns.txt`: Reverse DNS results (if performed)
+
