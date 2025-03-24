@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#prtcleaner
 # Prompt user for input file
 read -p "Enter the input text file: " input_file
 
