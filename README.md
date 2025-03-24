@@ -95,3 +95,40 @@ The script will save the output to the following files:
 - `${domain}_ip_ranges.txt`: IP ranges (if converted)
 - `${domain}_reverse_dns.txt`: Reverse DNS results (if performed)
 
+#PTR Cleaner
+A Bash script designed to extract and clean domain name pointers from a given text file.
+
+Purpose:
+This script simplifies the process of extracting domain name pointers from a text file, typically containing PTR records. It removes trailing dots from the extracted domain names, providing a clean output.
+
+Features:
+- Prompts user for input text file and output file name
+- Checks if the input file exists before proceeding
+- Extracts domain name pointers using `grep` with a Perl-compatible regular expression
+- Removes trailing dots from the extracted domain names using `sed`
+- Saves the cleaned domain names to the specified output file
+
+Usage:
+1. Make the script executable: `chmod +x ptrcleaner.sh`
+2. Run the script: `./ptrcleaner`
+3. Enter the input text file and output file name when prompted
+
+Example Output:
+Suppose the input file `ptr_records.txt` contains:
+
+```
+pointer example.com.
+pointer subdomain.example.com.
+pointer anotherdomain.net.
+```
+
+Running the script and specifying `ptr_records.txt` as the input file and `cleaned_domains.txt` as the output file will result in:
+
+```
+example.com
+subdomain.example.com
+anotherdomain.net
+```
+
+being saved to `cleaned_domains.txt`.
+
